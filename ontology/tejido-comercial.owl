@@ -30,7 +30,7 @@
         <terms:title xml:lang="en">Vocabulary for data representation of the local business census and activities licenses</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">escom</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/comercio/tejido-comercial#"/>
-        <rdfs:comment xml:lang="es">Esta versión ha sido generada dentro del contexto del proyecto &quot;Plataforma de gobierto abierto, colaborativa e interoperable&quot; en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña.
+        <rdfs:comment xml:lang="es">Esta versión ha sido generada dentro del contexto del proyecto &quot;Plataforma de gobierto abierto, colaborativa e interoperable&quot; en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y La Coruña. 
 
 En esta versión se han agregado metados en inglés y se han eliminado los conceptos que fueron deprecados en la versión previa:
 - ZonaComercial
@@ -793,10 +793,10 @@ Además de las propiedades asociadas a estas clases, y definidas en su correspon
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
     <rdf:Description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTML</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTML</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
