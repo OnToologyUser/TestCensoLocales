@@ -1,2 +1,25 @@
-<h2 id="desc" class="list">Vocabulary for data representation of the local business census and activities licenses: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
-<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.</span>
+<h2 id="desc" class="list">Vocabulario para la representación de datos sobre locales y zonas comerciales: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>La Figura 1 muestra las clases y propiedades del Vocabulario de Censo de Locales y sus Licencias de Actividad. <br></p>
+<center><img src="resources/images/CensoLocalesLicenciasActividad.png"><figcaption>Figura1. - Vocabulario de Censo de Locales y sus Licencias de Actividad.</figcaption>
+</center>
+<p>
+	El objetivo de este vocabulario es representar los datos que provienen del censo de locales, actividades, terrazas de hostelería y restauración y licencias de apertura.
+</p>
+<h3>3.1 Ejemplos de uso<span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h3>
+<p>Con la finalidad de facilitar la comprensión del uso de algunas clases y propiedades de la ontología se proporcionarán a continuación algunos ejemplos.</p>
+<p>En primer lugar representaremos un Municipio, como se puede observar en el código de ejemplo, se crea una instancia de la clase <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio">esadm:Municipio</a> que, como se explicó en la Figura 1, es una clase que se reutiliza de la ontología de territorio. El nombre del Municipio, su código de identificación y la fecha en que se creó en el catálogo  se representan a través de las propiedades de datos <code>dc:title</code>, <code>dc:identifier</code> y <code>dc:created </code> respectivamente. La codificación oficial asociada a la ciudad se representa mediante la propiedad <a href="#http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#codigoINE">esadm:codigoINE</a> y su geometría se representa mediante la propiedad <code>geosparql:hasGeometry</code>. <a></a></p>
+<pre>
+	&lt;http://vocab.linkeddata.es/recurso/localcomercial/10003602&gt; a escom:LocalComercial ;
+	escom:rotulo "PLAYGROUND" ;
+	escom:aforo		"28166" ;
+
+	geosparql:hasGeometry	&lt;http://vocab.linkeddata.es/recurso/localcomercial/10003602/geometry&gt; .</pre>
+<p> Para la representación de la geometría del municipio se crea una instancia de <code>sf:MultiPolygon</code> que es una de las clases definidas dentro de la ontología GeoSPARQL utilizada en la ontología de Objetos Geográficos <a href="https://datos.ign.es/def/geo_core">geo_core</a>. Adicionalmente se emplea la propiedad <code>geosparql:asWKT</code> para representar el tipo de codificación de la geometría; finalmente el tipo de dato del valor de la geometría se representa mediante la propiedad <code>geosparql:wktLiteral</code>.
+
+<pre class="example highlight preprint">
+	&lt;http://vocab.linkeddata.es/recurso/localcomercial/10003602/geometry&gt; a sf:Point ;
+        geosparql:asWKT  "POINT (-3.699489 40.419751)"^^geosparql:wktLiteral
+        geo_core:xETRS89 "440661,59" ;
+        geo_core:yETRS89 "4474610,53" .
+    .</pre>
+</p>
